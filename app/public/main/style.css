@@ -1,0 +1,67 @@
+
+body{
+	background-image:url("../img/background.jpg");	
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+	overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+	float: right;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 30px;
+	text-decoration: none;
+	font-size: 28px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+	background-color: brown;
+	color: white;
+}
+
+.about{
+	width:65%;
+	height:auto;
+	margin:0 auto;
+	background-color:#FFCBA1;
+	border:#FFE2C9 6px;
+	border-style:solid;
+	border-color:brown;
+	border-radius:35px;
+	padding:2% 5%;
+}
+
+h1{
+	text-align:center;
+	padding-top:2%;
+	padding-bottom:40px;
+	font-family: 'Fontdiner Swanky', cursive;
+	font-size:3.5em;
+	color:brown;
+	text-shadow:5px 5px 10px 5px white;
+	
+}
+
+
+p{
+	font-size:1em;
+	text-align:center;
+	font-family: 'Crafty Girls', cursive;
+	letter-spacing:1px;	
+	margin:0 7%;
+}
+
