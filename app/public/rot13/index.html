@@ -9,9 +9,10 @@
 	</head>
 	<body>
         <div class="topnav">
+            <a href="../messages/index.html">Messages</a>
             <a href="../b64/index.html">Base64</a>
             <a class="active" href="../rot13/index.html">Rot13</a>
-            <a href="../main/index.html">Home</a>
+            <a href="../main/index.html">About</a>
 
         </div>
 		<div class="ground">
@@ -22,9 +23,9 @@
 		</div>
 	
 		<br>
-		<form action ="/message" method="POST">
+		<form action ="/messagerot13" method="POST">
             <div class="text_area">
-                <textarea rows="1" cols="50" autofocus id="message" style="height:40px;font-size:1.4em;width:90%;">Type your sooper sekret message here</textarea>
+                <textarea rows="1" cols="50" name="messagerot13" id="message" style="height:40px;font-size:1.4em;width:90%;">Type your sooper sekret message here</textarea>
                 <br>
                 <br>
                 <button type="button" onclick="encode()" id="encode_button">
@@ -36,8 +37,8 @@
                 <br>
                 <br>
                 <h3 style="padding:0;">Send to:</h3>
-                <textarea rows="1" cols="50" id="fname" style="height:40px;font-size:1.4em;width:90%;">First name</textarea>
-                <textarea rows="1" cols="50" id="surname" style="height:40px;font-size:1.4em;width:90%;">Surname</textarea>
+                <textarea rows="1" cols="50" name="fname" id="fname" style="height:40px;font-size:1.4em;width:90%;">First name</textarea>
+                <textarea rows="1" cols="50" name="surname" id="surname" style="height:40px;font-size:1.4em;width:90%;">Surname</textarea>
                 <br>
                 <br>
                 <button type="submit" value="send" id="send">                    
