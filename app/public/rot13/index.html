@@ -25,15 +25,21 @@
 		<br>
 		<form action ="/messagerot13" method="POST">
             <div class="text_area">
-                <textarea rows="1" cols="50" name="messagerot13" id="message" style="height:40px;font-size:1.4em;width:90%;">Type your sooper sekret message here</textarea>
+
+                <textarea rows="1" cols="50" id="messagerot13" style="height:40px;font-size:1.4em;width:90%;">Type your sooper sekret here</textarea>
                 <br>
                 <br>
                 <button type="button" onclick="encode()" id="encode_button">
                     <p style="font-size:1.4em;font-weight:bold" ;>Encodify everything </p>
                 </button>
+                <br>
+                <br>
+                <textarea rows="1" cols="50" name="messagerot13" id="output" style="height:40px;font-size:1.4em;width:90%;">Type your sooper sekret here</textarea>
+
                 <button type="button" onclick="decode()" id="decode_button">
                     <p style="font-size:1.4em;font-weight:bold" ;>DECODE </p>
-                </button>     
+                </button>
+
                 <br>
                 <br>
                 <h3 style="padding:0;">Send to:</h3>
@@ -41,7 +47,7 @@
                 <textarea rows="1" cols="50" name="surname" id="surname" style="height:40px;font-size:1.4em;width:90%;">Surname</textarea>
                 <br>
                 <br>
-                <button type="submit" value="send" id="send">                    
+                <button type="submit" value="send" id="send">
                     <p style="font-size:1.4em;font-weight:bold" ;>SEND </p>
                 </button>
             </div>

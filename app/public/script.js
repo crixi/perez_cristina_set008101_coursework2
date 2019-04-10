@@ -14,8 +14,7 @@ function getComments() {
 
 function showComments(comments) {
     var commentsSection = document.getElementById
-        ("Suggestions");
-    for (var i = 0; i < comments.length; i++) {
+        ("Suggestions");    
         var section = document.createElement("Section");
         section.className += "suggestion";
         var heading = document.createElement("h3");
@@ -25,7 +24,7 @@ function showComments(comments) {
         section.appendChild(heading);
         section.appendChild(comment);
         commentsSection.appendChild(section);
-    }
+    
 
 }
 

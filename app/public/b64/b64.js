@@ -5,7 +5,7 @@ function encode()
 	var cypher_text = btoa(plain_text);
 	
 	
-	document.getElementById("message").innerHTML = cypher_text;
+	document.getElementById("output").innerHTML = cypher_text;
 
 }
 
@@ -15,6 +15,6 @@ function decode()
 	var cypher_text = atob(plain_text);
 	
 	
-	document.getElementById("message").innerHTML = cypher_text;
+	document.getElementById("output").innerHTML = cypher_text;
 
 }

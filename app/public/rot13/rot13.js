@@ -1,7 +1,7 @@
 
 function encode()
 {
-	var plain_text = document.getElementById("message").value;	
+	var plain_text = document.getElementById("messagerot13").value;	
 	var cypher_text=[];
 	var alphabet=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 
@@ -19,13 +19,13 @@ function encode()
 			cypher_text.push(letter);
 		}		
 	}
-	document.getElementById("message").innerHTML = cypher_text.join("");
+    document.getElementById("output").innerHTML = cypher_text.join("");
 
 }
 
 function decode()
 {
-	var plain_text = document.getElementById("message").value;	
+	var plain_text = document.getElementById("messagerot13").value;	
 	var cypher_text=[];
 	var alphabet=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 
@@ -43,6 +43,6 @@ function decode()
 			cypher_text.push(letter);
 		}		
 	}
-	document.getElementById("message").innerHTML = cypher_text.join("");
+	document.getElementById("messagerot13").innerHTML = cypher_text.join("");
 
 }

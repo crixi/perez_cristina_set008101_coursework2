@@ -2,6 +2,7 @@
   "ExpandedNodes": [
     "",
     "\\public",
+    "\\public\\b64",
     "\\sqlite3"
   ],
   "SelectedNode": "\\server.js",

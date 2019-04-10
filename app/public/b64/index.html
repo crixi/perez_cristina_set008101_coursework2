@@ -25,12 +25,14 @@
 		<br>
         <form action="/messageb64" method="POST">
             <div class="text_area">
-                <textarea rows="1" cols="50" name="messageb64" id="message" style="height:40px;font-size:1.4em;width:90%;">Type your sooper sekret message here</textarea>
+                <textarea rows="1" cols="50" id="message" style="height:40px;font-size:1.4em;width:90%;">Type your sooper sekret message here</textarea>
                 <br>
                 <br>
                 <button type="button" onclick="encode()" id="encode_button">
                     <p style="font-size:1.4em;font-weight:bold" ;>Encodify everything </p>
                 </button>
+                <textarea rows="1" cols="50" name="messageb64" id="output" style="height:40px;font-size:1.4em;width:90%;">Type your sooper sekret message here</textarea>
+
                 <button type="button" onclick="decode()" id="decode_button">
                     <p style="font-size:1.4em;font-weight:bold" ;>DECODE </p>
                 </button>
