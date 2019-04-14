@@ -43,7 +43,12 @@ h1{
 	font-family: 'Fontdiner Swanky', cursive;
 	color:brown;								
 }
-
+h2 {
+    color: white;
+    font-family: 'Fontdiner Swanky', cursive;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: brown;
+}
 			p{
 				
 				text-align:center;
@@ -59,38 +64,15 @@ h1{
 			}
 
 
-.paragraph{
-	width:75%;
-	height:auto;
-	margin:0 auto;
-}
 
-.input_area{
-	background-image:url("../img/base64.png");	
-	height:300px;
-	width:90%;
-	margin:0 auto;
-	background-position:center;
-	background-size:cover;
-}
 
-.text_area{
-	position:absolute;
-	top:35%;
-	left:15%;
-}
 
-.text_area2 {
-    position: absolute;
-    top: 85%;
-    left: 15%;
-}
 
-textarea{
-	width:60%;
-	align:center;
-	
-}
+
+
+
+
+
 button{
 	height:60px;
 	width:150px;
@@ -98,3 +80,17 @@ button{
 	border-radius:25%;
 }
 
+.column {
+    float:left;
+    width: 40%;
+    padding: 10px;
+    height: auto; 
+    padding:5%;
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}

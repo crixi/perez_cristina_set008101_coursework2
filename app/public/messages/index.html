@@ -5,54 +5,113 @@
     <link rel="stylesheet" href="style.css" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Crafty+Girls|Fontdiner+Swanky" rel="stylesheet">
     <title> Encoding secrets </title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
     <div class="topnav">
-        <a class="active"href="../messages/index.html">Messages</a>
+        <a class="active" href="../messages/index.html">Messages</a>
         <a href="../b64/index.html">Base64</a>
         <a href="../rot13/index.html">Rot13</a>
         <a href="../main/index.html">About</a>
 
     </div>
-
+    <br>
+    <br>
     <br>
 
+    <div class="row">
+        <div class="column">
+            <form action="/receiverot13" method="GET">
+                <div class="text_area">
+                    <h2>ROT13 MESSAGES</h2>
+                    <h3 style="padding:0;color:#FFCBA1;">Enter your details:</h3>
+                    <textarea rows="1" cols="50" name="fname" id="fname" style="height:40px;font-size:1.4em;width:90%;">First name</textarea>
+                    <textarea rows="1" cols="50" name="surname" id="surname" style="height:40px;font-size:1.4em;width:90%;">Surname</textarea>
+                    <br>
+                    <br>
 
-    <form action="/receive" method="GET">
-        <div class="text_area">
-            <h3 style="padding:0;color:#FFCBA1;">Enter your details:</h3>
-            <textarea rows="1" cols="50" name="fname" id="fname" style="height:40px;font-size:1.4em;width:90%;">First name</textarea>
-            <textarea rows="1" cols="50" name="surname" id="surname" style="height:40px;font-size:1.4em;width:90%;">Surname</textarea>
-            <br>
-            <br>
+                    <button type="submit" value="Submit" style="font-size:1.4em;font-weight:bold;font-family: 'Crafty Girls', cursive;"> Receive</button>
+                    <br>
+                    <br>
+                    <br>
 
-            <button type="submit" value="Submit" style="font-size:1.4em;font-weight:bold;font-family: 'Crafty Girls', cursive;"> Receive</button>
-         </div>   
-            <br>
-            <br>
-            <br>
-    </form>
-        <div class="text_area2">
-            <textarea rows="1" cols="102" name="message" id="suggestions" style="height:40px;font-size:1.4em;width:90%;">No messages</textarea>
-            <br>
-            <br>
+                    <br>
+                    <br>
+                    <br>
 
-            <button type="button" onclick="decode()" id="decode_button">
-                <p style="font-size:1.4em;font-weight:bold" ;>DECODE </p>
-            </button>
-            <br>
-            <br>
 
-            <br>
-            <br>
+                    <textarea rows="1" cols="102" name="message" id="messagereceivedRot13" style="height:40px;font-size:1.4em;width:90%;">any messages?</textarea>
+                    <br>
+                    <br>
 
+                    <button type="button" onclick="decoderot13()" id="decode_button">
+                        <p style="font-size:1.4em;font-weight:bold" ;>DECODE </p>
+                    </button>
+                    <br>
+                    <br>
+                    <br>
+
+                    <br>
+                    <br>
+                    <br>
+
+                    <textarea rows="1" cols="102" name="message" id="messagedecoderot13" style="height:40px;font-size:1.4em;width:90%;">message decoded</textarea>
+
+                    <br>
+                    <br>
+
+                </div>
+            </form>
         </div>
-    
+        <div class="column">
+            <form action="/receiveb64" method="GET">
+                <div class="text_area">
+                    <h2>BASE 64 MESSAGES</h2>
+
+                    <h3 style="padding:0;color:#FFCBA1;">Enter your details:</h3>
+                    <textarea rows="1" cols="50" name="fname" id="fname" style="height:40px;font-size:1.4em;width:90%;">First name</textarea>
+                    <textarea rows="1" cols="50" name="surname" id="surname" style="height:40px;font-size:1.4em;width:90%;">Surname</textarea>
+                    <br>
+                    <br>
+
+                    <button type="submit" value="Submit" style="font-size:1.4em;font-weight:bold;font-family: 'Crafty Girls', cursive;"> Receive</button>
+                    <br>
+                    <br>
+                    <br>
+
+                    <br>
+                    <br>
+                    <br>
+
+
+                    <textarea rows="1" cols="102" name="message" id="messagereceivedB64" style="height:40px;font-size:1.4em;width:90%;">any messages?</textarea>
+                    <br>
+                    <br>
+
+                    <button type="button" onclick="decodeb64()" id="decode_button">
+                        <p style="font-size:1.4em;font-weight:bold" ;>DECODE </p>
+                    </button>
+                    <br>
+                    <br>
+                    <br>
+
+                    <br>
+                    <br>
+                    <br>
+
+                    <textarea rows="1" cols="102" name="message" id="messagedecodeb64" style="height:40px;font-size:1.4em;width:90%;">message decoded</textarea>
+
+                    <br>
+                    <br>
+
+                </div>
+            </form>
+        </div>
+    </div>
 
     <br>
     <br>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-    
- </body>
+    <script type=" text/javascript" src="messagerot13.js"></script>
+</body>
 </html>
