@@ -2,8 +2,7 @@
   "ExpandedNodes": [
     "",
     "\\public",
-    "\\public\\b64",
-    "\\public\\rot13"
+    "\\public\\messages"
   ],
   "SelectedNode": "\\server.js",
   "PreviewInSolutionExplorer": false

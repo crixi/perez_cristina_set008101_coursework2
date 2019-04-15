@@ -3,9 +3,7 @@ var app = express();
 const sqlite3 = require('sqlite3').verbose();
 let db = new sqlite3.Database('sqlite3/users.db');
 var bodyParser = require('body-parser');
-var jsdom = require("jsdom");
-var JSDOM = jsdom.JSDOM;
-var Base64 = require('js-base64').Base64;
+
 
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -20,15 +18,18 @@ app.get('/', function (request, response) {
 app.get('/receiverot13', function (request, response) {
     console.log('GET request received at /users');
     var post = request.body;
+    
     db.get('SELECT messagerot13 FROM users WHERE fname = ? AND surname = ?',
-        [request.body.fname, request.body.surname, request.body.messagerot13],
-        function (row) {            
+        [request.body.fname, request.body.surname, request.body.messagerot13], function (row) {
             if (row) {
-                
-                response.send(row);             
+                response.send(document.getElementById("messagedecoderot13").innerHTML = row);
+
             }
-            
-    });
+            else {
+                console.log("No message");
+                response.status(200).redirect('../messages/index.html');
+            }
+        });
 });
 
 app.get('/receiveb64', function (request, response) {
@@ -42,8 +43,7 @@ app.get('/receiveb64', function (request, response) {
                 response.status(200).redirect('../messages/index.html');
             }
             else {
-                function showMessage(comments) {
-                    this.jsdom = require('global-jsdom')()
+                function showMessage(comments) {                    
                     var commentsSection = document.getElementById("messagereceivedB64");
                     for (var i = 0; i < comments.length; i++) {
                         commentsSection.innerHTML = messageb64[i];
